@@ -23,3 +23,8 @@ exports.totalCAByDate = function(req,res){
        res.send(rows)
    })
 }
+exports.CAByUser = function(req,res){
+    ChiffreAff.chiffreAffByClient(con,req.params.user,function(err,rows){
+        res.send(rows)
+    })
+}

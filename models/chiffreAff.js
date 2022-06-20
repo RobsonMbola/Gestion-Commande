@@ -12,5 +12,8 @@ const con = require ('../config/Db');
  },
  totalChiffreAffByDate: function(con,date,callback){
     con.query(`select sum(qte*pu) as total from produit,commande where  commande.numProd=produit.numProduit and YEAR(date)='${date}'`,callback)
+ },
+ chiffreAffByClient: function(con,user,callback){
+    con.query(`select client.numClient as client,nom,sum(qte*pu) as CA ,YEAR(date) as date from client,produit,commande where client.numClient='${user}' and client.numClient=commande.numClient and commande.numProd=produit.numProduit  group by client.numClient,nom,date`,callback)
  }
 }
