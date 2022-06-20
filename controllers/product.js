@@ -21,11 +21,11 @@ exports.edit= function(req,res){
             })
         }
 exports.update= function(req,res){
-   
             Product.update(con,req.body,req.params.id, function(err){ 
             })
         }
 exports.destroy=function(req,res){
+    
             Product.destroy(con,req.params.id, function(err){
                
             })

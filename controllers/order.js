@@ -18,7 +18,7 @@ exports.edit= function(req,res){
             })
         }
 exports.update= function(req,res){
-   
+           
             Order.update(con,req.body,req.params.id, function(err){ 
             })
         }

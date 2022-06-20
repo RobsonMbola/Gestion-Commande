@@ -21,9 +21,9 @@
          con.query(`UPDATE produit SET 
          numProduit ='${data.name}',
          design = '${data.design}',
-          pu='${data.price}',
-          stock='${data.stock}'
-          WHERE idProd =${id}
+         pu='${data.price}',
+         stock='${data.stock}'
+         WHERE idProd =${id}
          `,
          callback)
      },

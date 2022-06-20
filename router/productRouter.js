@@ -9,7 +9,7 @@ productRouter.get("/:product",getOldStock);
 productRouter.put("/:product",updateStock);
 productRouter.post("/",store);
 productRouter.get("/:id/edit",edit);
-productRouter.put("/:id",update);
+productRouter.patch("/:id",update);
 productRouter.delete("/:id",destroy);
 module.exports= productRouter;
 
